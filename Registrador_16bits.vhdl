@@ -1,6 +1,11 @@
 LIBRARY IEEE;
 use IEEE.std_logic_1164.all;
 
+
+--###################################################
+--#FALTA FAZER O TESTBENCH PRA VER SE TA FUNCIONANDO#
+--###################################################
+
 -- Portas de entrada e saida
 ENTITY registrador IS
   PORT(entrada: in std_logic_vector(15 DOWNTO 0);
