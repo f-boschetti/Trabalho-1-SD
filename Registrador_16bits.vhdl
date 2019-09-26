@@ -7,7 +7,7 @@ ENTITY registrador IS
   	   load: in std_logic;
   	   clk: in std_logic;
   	   reset: in std_logic;
-  	   saida: out std_logic_vector(15 DOWNTO0)
+  	   saida: out std_logic_vector(15 DOWNTO 0)
   	   );
 END ENTITY registrador;
 
@@ -20,9 +20,14 @@ architecture arch of registrador is
 			begin
 			
 			if(reset = '0') then
-				saida = "0000000000000000";
+				saida <= "0000000000000000";
 				
-			elsif(
+			elsif(clk'event and clk = '0') then
+				entrada <= saida;
+			end if;
+		end process;
+		
+end arch;	
 
 
 -- é quase igual a um flip flop JK
