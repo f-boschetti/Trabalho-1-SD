@@ -19,11 +19,13 @@ architecture arch of registrador is
 		process (reset, load, clk) is
 			begin
 			
-			if(reset = '0') then
+			-- se o reset for 1, a saida zera
+			if(reset = '1') then
 				saida <= "0000000000000000";
-				
+			
+			--Quando tiver um evento no clock e ele for zero, a saida recebe a entrada	
 			elsif(clk'event and clk = '0') then
-				entrada <= saida;
+				saida <= entrada;
 			end if;
 		end process;
 		
