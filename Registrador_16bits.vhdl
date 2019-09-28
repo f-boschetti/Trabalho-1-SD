@@ -2,9 +2,12 @@ LIBRARY IEEE;
 use IEEE.std_logic_1164.all;
 
 
---###################################################
---#FALTA FAZER O TESTBENCH PRA VER SE TA FUNCIONANDO#
---###################################################
+--###########################################################################################################################
+--#FALTA FAZER O TESTBENCH PRA VER SE TA FUNCIONANDO                                                                        #
+--#Está dando o erro:                                                                                                       #
+--#                                                                                                                         #
+--#Error launching EPWave: [Could not parse file: 16: Unknown binary character encountered: U]. Could not load './dump.vcd' #
+--###########################################################################################################################
 
 -- Portas de entrada e saida
 ENTITY registrador IS
@@ -36,7 +39,3 @@ architecture arch of registrador is
 		
 end arch;	
 
-
--- é quase igual a um flip flop JK
--- no de 8 pra 16 tem q adicionar zeros a direita com o "&"
--- gatilhado na borda de subida e quando o "Lx" for 1
