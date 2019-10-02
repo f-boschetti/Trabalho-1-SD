@@ -21,7 +21,7 @@ BEGIN
     	c => cin;
     	for i in 0 to 15 loop 
     	soma(i) := a(i) xor b(i) xor c;
-    	c := (a(i) and c(i)) or ((a(i) xor b(i)) and c);
+    	c := (a(i) and c(i)) or ((a(i) xor b(i)) and c); -- pra variaveis a atribuição de valor é assim ":="
     	end loop;
     
     cout <= c;
