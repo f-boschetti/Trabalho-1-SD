@@ -6,7 +6,7 @@ use IEEE.std_logic_1164.all;
 entity mux_2x1 is
 	port(
     	in1, in2: in std_logic_vector (15 downto 0);
-    	sel: in std_logic;
+    	sel1 , sel2: in std_logic;
         s: out std_logic_vector (15 downto 0)
     );
 end mux_2x1;
