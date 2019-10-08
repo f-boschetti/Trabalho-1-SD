@@ -20,25 +20,25 @@ architecture arch of mux_4x1 is
             if (sel1 = '0') then --Se for 00 a saida e a in0
             	if (sel2 = '0') then
             		s <= in0;
-            	end if
-            end if 	
+            	end if;
+            end if; 	
             		
-            if sel1 = '0') then -- Se for 01 a saida e in1
+            if (sel1 = '0') then -- Se for 01 a saida e in1
             	if (sel2 = '1') then
             		s <= in1;
-            	end if
-            end if		
+            	end if;
+            end if;
             		
             if (sel1 = '1') then -- Se for 10 a saida e in2
             	if (sel2 = '0') then
             		s <= in2;
-            	end if
-            end if
+            	end if;
+            end if;
             	
             if (sel1 = '1') then -- se for 11 a saida é in3
             	if (sel2 = '1') then
 						s <= in3;
-                end if        
+                end if;
             end if;
     end process;        
     
