@@ -22,7 +22,7 @@ begin
 
 
 --O que cada entrada va receber
-entity work.TB_registrador port map(entrada <= TB_entrada, load <= TB_load, clk <= TB_clk, reset <= TB_reset);
+entity work.TB_registrador port map(entrada => TB_entrada, load => TB_load, clk => TB_clk, reset => TB_reset);
 
 	process
     begin
