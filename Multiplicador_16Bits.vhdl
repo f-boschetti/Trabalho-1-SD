@@ -15,10 +15,5 @@ END ENTITY multiplicador;
 ARCHITECTURE arch OF multiplicador IS
 BEGIN 
 
-signal a: unsigned(15 downto 0);
-signal b: unsigned(15 downto 0);
-signal produto:  unsigned(31 downto 0);
-
-
 produto <= a * b;
 END ARCHITECTURE arch;
