@@ -1,33 +1,30 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
--- estamos multiplicando 2 numeros de 16 bits
--- e se fosse pra pensar no algoritmo de multiplcação, apos cada numero multiplicado
--- adicionaria um zero a direita
--- daí é preciso 2*16 bits para ter o resultado da multiplicação desses 2 numeros
 
-ENTITY multiplicador IS
+ENTITY ula IS
   PORT(
-    a :       IN     std_logic_vector (15 downto 0);
-    b :       IN     std_logic_vector (15 downto 0);
+    a :         IN   std_logic_vector (15 downto 0);
+    b :         IN   std_logic_vector (15 downto 0);
     seletor:    IN   std_logic;
     overflow:   out  std_logic;
-    resultado : OUT  std_logic_vector (31 downto 0)
+    resultado:  out  std_logic_vector (31 downto 0)
   );
-END ENTITY multiplicador;
+END ENTITY ula;
 
-ARCHITECTURE arch OF multiplicador IS
+ARCHITECTURE arch OF ula IS
 
 	signal intermediario: std_logic_vector(31 downto 0)
 	
 BEGIN
 
 	PROCESS(a, b, seletor)
-	-- selecao do multiplicador
+	
+	-- seleciona multiplicacao na ula
 	if (seletor = '0') then
 	
-		--faz a operacao
  		intermediario <= std_logic_vector(UNSIGNED a * UNSIGNED  b);
  			-- se os bits mais a esquerda do vetor forem maiores que zero
  			--overflow recebe 1 e o resoltado vai para a saida 
